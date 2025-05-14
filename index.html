@@ -1,17 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>krnl key system</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="animated-glow"></div>
-    <div class="container">
-        <input type="text" class="key-box" id="key-box" readonly>
-    </div>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KRNL - Roblox Executor</title>
+    <meta name="description" content="KRNL is a powerful, free Roblox executor using the Velocity API. Download now at usekr.nl" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #0e0e0e;
+        overflow-x: hidden;
+      }
 
-    <script src="script.js"></script>
-</body>
+      .bg-blob {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at 25% 25%, #4c1d95, transparent 40%),
+                    radial-gradient(circle at 75% 75%, #6b21a8, transparent 40%),
+                    radial-gradient(circle at 50% 50%, #581c87, transparent 50%);
+        animation: moveBlobs 15s ease-in-out infinite;
+        filter: blur(100px);
+        opacity: 0.3;
+      }
+
+      @keyframes moveBlobs {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(-25%, -15%) scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans relative">
+    <div class="bg-blob"></div>
+
+    <header class="flex justify-between items-center p-6 bg-black bg-opacity-40 backdrop-blur-md shadow-md sticky top-0 z-10">
+      <h1 class="text-2xl font-bold text-purple-400">KRNL</h1>
+      <nav class="space-x-6">
+        <a href="#features" class="hover:text-purple-300">Features</a>
+        <a href="#install" class="hover:text-purple-300">Install</a>
+        <a href="#faq" class="hover:text-purple-300">FAQ</a>
+      </nav>
+    </header>
+
+    <section class="text-center py-24 px-6">
+      <h2 class="text-5xl font-extrabold mb-4 text-purple-300">KRNL</h2>
+      <p class="text-lg mb-6 text-gray-400">Roblox executor using Velocity API.<br>No key system. Free forever.</p>
+      <a href="https://cdn.krnl.place/get" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition">
+        Download Now
+      </a>
+      <p class="text-sm text-gray-500 mt-3">.NET Framework 4.8.1 required</p>
+    </section>
+
+    <section id="features" class="px-6 py-20 bg-gray-900 bg-opacity-60 backdrop-blur-sm rounded-3xl mx-4 mb-10">
+      <h3 class="text-3xl font-bold mb-10 text-center">Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <div>
+          <h4 class="text-xl font-semibold text-purple-400 mb-2">Velocity API</h4>
+          <p class="text-gray-400">Stable, fast execution built on latest tech</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold text-purple-400 mb-2">No Key System</h4>
+          <p class="text-gray-400">No ads, no bloat — just run it</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold text-purple-400 mb-2">Always Free</h4>
+          <p class="text-gray-400">100% free, always will be</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="px-6 py-20 bg-black bg-opacity-40 rounded-3xl mx-4 mb-10">
+      <h3 class="text-3xl font-bold mb-6 text-center">How to Install</h3>
+      <ol class="list-decimal list-inside max-w-xl mx-auto text-gray-300 space-y-2">
+        <li>Download KRNL from the button above</li>
+        <li>Run the installer (.exe file)</li>
+        <li>Install .NET Framework 4.8.1 if missing</li>
+        <li>Launch KRNL and attach to Roblox</li>
+        <li>Paste & run your Lua scripts 🔥</li>
+      </ol>
+    </section>
+
+    <section id="faq" class="px-6 py-20 bg-gray-900 bg-opacity-60 backdrop-blur-sm rounded-3xl mx-4 mb-10">
+      <h3 class="text-3xl font-bold mb-6 text-center">FAQ</h3>
+      <div class="max-w-2xl mx-auto space-y-6">
+        <div>
+          <h4 class="text-xl font-semibold text-purple-400">Is KRNL safe?</h4>
+          <p class="text-gray-400">yeah fr. it's trusted by thousands every day.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold text-purple-400">Why does my antivirus flag it?</h4>
+          <p class="text-gray-400">false positive. add to exceptions.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold text-purple-400">Can I use custom scripts?</h4>
+          <p class="text-gray-400">yup. paste & execute easy af</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black bg-opacity-40 text-center py-8 text-gray-500 text-sm">
+      &copy; 2025 KRNL. Not affiliated with Roblox. | <a href="https://usekr.nl" class="text-purple-400 hover:underline">usekr.nl</a>
+    </footer>
+  </body>
 </html>
